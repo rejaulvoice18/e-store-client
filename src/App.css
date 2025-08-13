@@ -7,11 +7,19 @@ body{
 
 .bg-blue{background: #233a95;}
 
+/* customize  width */
+
+@media (min-width: 1300px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1200px;
+    }
+}
+
 
 .headerWrapper .top-strip{ padding: 8px 0px;}
 .headerWrapper .top-strip p{ color: #fff; font-size: 12px; font-weight: 500;}
 
-.headerWrapper .header{ width: 100%; height: auto; padding: 15px 0px;}
+.headerWrapper .header{ width: 100%; height: auto; padding: 25px 0px;}
 .logoWrapper img{ width: 100%;}
 
 .headerWrapper .header .part2 .countryDrop{width: 170px; height: 60px; min-width: 150px; color: #000 !important; border: 1px solid rgba(0,0,0,0.2) !important; border-radius:  7px !important; padding: 10px 15px !important;}
@@ -56,3 +64,12 @@ header .part3 .circle svg{font-size: 20px;}
     position: absolute; top: -6px; right: -4px; background: #ea2b0f; border-radius: 50%;
     color: #fff; width: 20px; height: 20px;
 }
+
+/* Navigation Menu */
+nav .allCatTab{background: #2bbef9; padding: 10px 15px !important; border-radius: 30px !important;}
+nav .allCatTab *{color: #fff}
+nav .allCatTab:hover{background: #2bbef9;}
+nav .allCatTab .text{font-weight: 600;}
+
+nav .allCatTab .icon1 svg{font-size: 20px !important}
+nav .allCatTab .icon2 svg{font-size: 15px !important}

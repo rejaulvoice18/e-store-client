@@ -3,9 +3,10 @@ import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import CountryDropdown from '../CountryDropdown/CountryDropdown';
 import { Button } from '@mui/material';
-import { IoIosSearch } from 'react-icons/io';
 import { FiUser } from 'react-icons/fi';
 import { IoBagOutline } from 'react-icons/io5';
+import SearchBox from '../SearchBox/SearchBox';
+import Navigation from '../Navigation/Navigation';
 const Header = () => {
     return (
         <>
@@ -15,7 +16,7 @@ const Header = () => {
                         <p className='mb-0 mt-0 text-center'>Due to the <b>COVID 19</b> epidemic, orders may be processed with a slight delay</p>
                     </div>
                 </div>
-
+                {/* Header Section Start */}
                 <header className='header'>
                     <div className='container'>
                         <div className='row'>
@@ -26,10 +27,7 @@ const Header = () => {
                                 {/* Select Country */}
                                 <CountryDropdown />
                                 {/* Header Search Bar */}
-                                <div className='headerSearch ml-3 mr-3'>
-                                    <input type="text" placeholder='Search for products.....' />
-                                    <Button><IoIosSearch /></Button>
-                                </div>
+                                <SearchBox />
                                 {/* End Header Search Bar */}
 
                                 {/* User Account */}
@@ -47,6 +45,11 @@ const Header = () => {
                         </div>
                     </div>
                 </header>
+                {/* Header Section End */}
+
+                {/* Nav Section Start */}
+                    <Navigation />
+                {/* Nav Section End */}
             </div>
         </>
     );
