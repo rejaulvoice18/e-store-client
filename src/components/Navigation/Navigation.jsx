@@ -1,5 +1,6 @@
 import { Button } from '@mui/material';
 import React from 'react';
+import { CiHome } from 'react-icons/ci';
 import { FaAngleDown } from 'react-icons/fa';
 import { IoIosMenu } from 'react-icons/io';
 import { Link } from 'react-router-dom';
@@ -16,9 +17,9 @@ const Navigation = () => {
                             <span className='icon2 ml-2'><FaAngleDown /></span>
                         </Button>
                     </div>
-                    <div className='col-sm-9 navPart2'>
-                        <ul className='list list-inline'>
-                            <li className='list-inline-item'><Link to="/">Home</Link></li>
+                    <div className='col-sm-9 navPart2 d-flex align-items-center'>
+                        <ul className='list list-inline ml-auto'>
+                            <li className='list-inline-item'><Link to="/"> <CiHome /> &nbsp; Home</Link></li>
                             <li className='list-inline-item'><Link to="/">Fashion</Link></li>
                             <li className='list-inline-item'><Link to="/">Electronic</Link></li>
                             <li className='list-inline-item'><Link to="/">Bakery</Link></li>
