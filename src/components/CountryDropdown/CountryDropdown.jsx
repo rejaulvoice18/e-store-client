@@ -1,12 +1,18 @@
 import { Button, Dialog } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { MdClose } from "react-icons/md";
+import { MyContext } from "../../App";
 
 const CountryDropdown = () => {
 
     const [isOpenModal, setIsOpenModal] = useState(false)
+
+    const context = useContext(MyContext)
+
+    console.log(context)
+
     return (
         <div>
             <Button className='countryDrop' onClick={()=>setIsOpenModal(true)}>
@@ -27,37 +33,17 @@ const CountryDropdown = () => {
                     <Button><IoIosSearch /></Button>
                 </div>
 
+                {/* Country API */}
                 <ul className="countryList mt-3">
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
-                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
+                    
+                    {
+                        context.countryList?.length!==0 && context.countryList?.map((item, idx)=>{
+                            return(
+                                <li key={idx}><Button onClick={()=> setIsOpenModal(false)}>{item.country}</Button></li>
+                            )
+                        })
+                    }
+                    
                 </ul>
             </Dialog>
         </div>
