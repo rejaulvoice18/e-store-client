@@ -85,8 +85,9 @@ nav .allCatTab .icon2 svg{font-size: 15px !important}
 nav .navPart2 ul{
     margin-bottom: 0px;
 }
-nav .navPart2 ul li a{font-size: 15px; font-weight: 600; text-decoration: none;
-color: rgba(0,0,0,0.7); text-transform: uppercase; display: flex; align-items: center; padding: 8px 13px;
+nav .navPart2 ul li a{text-decoration: none;}
+nav .navPart2 ul li a button{font-size: 14px; font-weight: 600; text-decoration: none;
+color: rgba(0,0,0,0.6); text-transform: uppercase; display: flex; align-items: center; padding: 8px 13px;
 transition: all 0.2s ease-in-out; border-radius: 10px;
 }
 nav .navPart2 ul li a svg{font-size: 20px;}

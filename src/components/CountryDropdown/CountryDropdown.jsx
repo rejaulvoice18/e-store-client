@@ -18,7 +18,7 @@ const CountryDropdown = () => {
             </Button>
 
             {/* Pop Up Modal */}
-            <Dialog open={isOpenModal} className="locationModal">
+            <Dialog open={isOpenModal} onClose={()=> setIsOpenModal(false)} className="locationModal">
                 <h4 className="mb-0">Choose your Delivery Location</h4>
                 <p>Enter your address and we will specify the offer for your area.</p>
                 <Button className="close_" onClick={()=> setIsOpenModal(false)}><MdClose /></Button>
@@ -28,36 +28,36 @@ const CountryDropdown = () => {
                 </div>
 
                 <ul className="countryList mt-3">
-                    <li><Button>Bangladesh</Button></li>
-                    <li><Button>Sri Lanka</Button></li>
-                    <li><Button>Portugal</Button></li>
-                    <li><Button>Franch</Button></li>
-                    <li><Button>Spain</Button></li>
-                    <li><Button>Germany</Button></li>
-                    <li><Button>Bangladesh</Button></li>
-                    <li><Button>Sri Lanka</Button></li>
-                    <li><Button>Portugal</Button></li>
-                    <li><Button>Franch</Button></li>
-                    <li><Button>Spain</Button></li>
-                    <li><Button>Germany</Button></li>
-                    <li><Button>Bangladesh</Button></li>
-                    <li><Button>Sri Lanka</Button></li>
-                    <li><Button>Portugal</Button></li>
-                    <li><Button>Franch</Button></li>
-                    <li><Button>Spain</Button></li>
-                    <li><Button>Germany</Button></li>
-                    <li><Button>Bangladesh</Button></li>
-                    <li><Button>Sri Lanka</Button></li>
-                    <li><Button>Portugal</Button></li>
-                    <li><Button>Franch</Button></li>
-                    <li><Button>Spain</Button></li>
-                    <li><Button>Germany</Button></li>
-                    <li><Button>Bangladesh</Button></li>
-                    <li><Button>Sri Lanka</Button></li>
-                    <li><Button>Portugal</Button></li>
-                    <li><Button>Franch</Button></li>
-                    <li><Button>Spain</Button></li>
-                    <li><Button>Germany</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Bangladesh</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Sri Lanka</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Portugal</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Franch</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Spain</Button></li>
+                    <li><Button onClick={()=> setIsOpenModal(false)}>Germany</Button></li>
                 </ul>
             </Dialog>
         </div>
