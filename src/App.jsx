@@ -11,6 +11,7 @@ const MyContext = createContext();
 function App() {
 
   const [countryList, setCountryList] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('')
 
   // console.log(countryList)
 
@@ -26,7 +27,10 @@ function App() {
   }
 
   const values = {
-    countryList
+    countryList,
+    selectedCountry,
+    setSelectedCountry
+    
   }
 
   return (
